@@ -9,7 +9,7 @@ entries:
     name: local-manager
     type: application
     urls:
-    - helm_charts/local-manager-0.1.0.tgz
+    - local-manager-0.1.0.tgz
     version: 0.1.0
   main-manager:
   - apiVersion: v2
@@ -20,7 +20,7 @@ entries:
     name: main-manager
     type: application
     urls:
-    - helm_charts/main-manager-0.1.0.tgz
+    - main-manager-0.1.0.tgz
     version: 0.1.0
   response-router:
   - apiVersion: v2
@@ -31,7 +31,7 @@ entries:
     name: response-router
     type: application
     urls:
-    - helm_charts/response-router-0.1.0.tgz
+    - response-router-0.1.0.tgz
     version: 0.1.0
   spider-lightedge:
   - apiVersion: v2
@@ -42,6 +42,6 @@ entries:
     name: spider-lightedge
     type: application
     urls:
-    - helm_charts/spider-lightedge-0.1.0.tgz
+    - spider-lightedge-0.1.0.tgz
     version: 0.1.0
 generated: "2021-09-14T16:37:08.73634524+02:00"
