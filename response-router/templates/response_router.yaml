@@ -1,0 +1,101 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: response-router-cm
+  namespace: {{ .Values.namespace }}
+data:
+   logger_name: " Response Router " #ResponseRouter1/2/3..
+   log_level:  "DEBUG"
+   log_path_general: "/logs/rr.log"
+   log_path_timing: "/logs/rrtime.log"
+   api_port: "3000" # port for API svc
+   msg_broker_addr: "163.162.42.24:5672" # for IT TIM:163.162.42.24
+   msg_broker_user: "fbk_user"
+   msg_broker_password: "@mqpt1m"
+   send_topic: "TO_CARS" # msg_broker send topic
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: {{ .Release.Name }}
+  name: {{ .Release.Name }}
+  namespace: {{ .Values.namespace }}
+spec:
+  containers:
+  - image: {{ .Values.image.repository}}:{{ .Values.image.tag}}
+    name: {{ .Chart.Name }}
+    env:
+      - name: API_PORT
+        valueFrom:
+          configMapKeyRef:
+            name: response-router-cm
+            key: api_port
+      - name: LOG_PATH_GENERAL
+        valueFrom:
+          configMapKeyRef:
+            name: response-router-cm
+            key: log_path_general
+      - name: LOG_LEVEL
+        valueFrom:
+          configMapKeyRef:
+            name: response-router-cm
+            key: log_level
+      - name: LOGGER_NAME
+        valueFrom:
+          configMapKeyRef:
+            name: response-router-cm
+            key: logger_name
+      - name: MSG_BROKER_ADDR
+        valueFrom:
+          configMapKeyRef:
+            name: response-router-cm
+            key: msg_broker_addr
+      - name: MSG_BROKER_USER
+        valueFrom:
+          configMapKeyRef:
+            name: response-router-cm
+            key: msg_broker_user
+      - name: MSG_BROKER_PASSWORD
+        valueFrom:
+          configMapKeyRef:
+            name: response-router-cm
+            key: msg_broker_password
+      - name: SEND_TOPIC
+        valueFrom:
+          configMapKeyRef:
+            name: response-router-cm
+            key: send_topic
+    resources: {}
+    imagePullPolicy: {{ .Values.image.pullPolicy}}
+    volumeMounts:
+      - mountPath: "/logs/"
+        name: mypd
+  volumes:
+    - name: mypd
+      persistentVolumeClaim:
+        claimName: log-pvc
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: {{ .Chart.Name }}
+  name: {{ .Chart.Name }}-service
+  namespace: {{ .Values.namespace }}
+spec:
+  ports:
+  - port: {{ .Values.service.port}}
+    protocol: {{ .Values.service.protocol}}
+    targetPort: {{ .Values.service.port}}
+    nodePort: {{ .Values.service.nodeport}}
+  selector:
+    run: {{ .Chart.Name }}
+  type: {{ .Values.service.type}}
+status:
+  loadBalancer: {}
