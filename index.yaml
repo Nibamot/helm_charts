@@ -3,40 +3,40 @@ entries:
   local-manager:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-09-14T16:37:08.736666226+02:00"
+    created: "2021-09-23T14:44:44.986193629+02:00"
     description: CLM Local Manager helm chart for Kubernetes
-    digest: 3b8e7e14b893c195935d53b7ec8db1045bc2ff11df846a90ca068fc7318e0d35
+    digest: 23b5946f7bc11ce052d662c9a543597f4f2689b813d04e7ac87334f6c18de4bb
     name: local-manager
     type: application
     urls:
-    - local-manager-0.1.0.tgz
-    version: 0.1.0
+    - local-manager-0.2.0.tgz
+    version: 0.2.0
   main-manager:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-09-14T16:37:08.736870529+02:00"
+    created: "2021-09-23T14:44:44.986809749+02:00"
     description: CLM Main Manager helm chart for Kubernetes
-    digest: 3c5ce7f2304be4eb2553bbc7ae486dd0fb3a4968abf3b4b0b91bd95b8a664033
+    digest: 2fc0f28bf29af60445db6297e5ec724f2d660ce7806c51e9ea17e6effefd28a2
     name: main-manager
     type: application
     urls:
-    - main-manager-0.1.0.tgz
-    version: 0.1.0
+    - main-manager-0.2.0.tgz
+    version: 0.2.0
   response-router:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-09-14T16:37:08.737062071+02:00"
+    created: "2021-09-23T14:44:44.987343516+02:00"
     description: CLM response router helm chart for Kubernetes
-    digest: f819767a633ce0dafc8e9cd8524280f1d46589ac9fe25fc048805e18e539c16a
+    digest: 858462fdfeb1aba52191cb5ba642713af7efa3092ee5eeb96d01654ce1e3b796
     name: response-router
     type: application
     urls:
-    - response-router-0.1.0.tgz
-    version: 0.1.0
+    - response-router-0.2.0.tgz
+    version: 0.2.0
   spider-lightedge:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-09-14T16:37:08.737369555+02:00"
+    created: "2021-09-23T14:44:44.988078448+02:00"
     description: A Helm chart for Kubernetes
     digest: be9fc46fad92d89e9f6453aa7bc623bf2562972748946a3ebf943d21cffa588a
     name: spider-lightedge
@@ -44,4 +44,4 @@ entries:
     urls:
     - spider-lightedge-0.1.0.tgz
     version: 0.1.0
-generated: "2021-09-14T16:37:08.73634524+02:00"
+generated: "2021-09-23T14:44:44.984902146+02:00"
