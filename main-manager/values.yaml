@@ -6,7 +6,7 @@ replicaCount: 1
 namespace: default
 image:
   repository: utomn0/main_manager
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
@@ -16,6 +16,3 @@ service:
   port: 4000
   nodeport: 32400
   protocol: TCP
-
-volume:
-  mount: "/logs/"

@@ -6,7 +6,7 @@ replicaCount: 1
 namespace: default
 image:
   repository: utomn0/response_router
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
@@ -16,6 +16,3 @@ service:
   port: 3000
   nodeport: 32300
   protocol: TCP
-
-volume:
-  mount: "/logs/"

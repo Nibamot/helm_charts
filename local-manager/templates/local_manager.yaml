@@ -6,8 +6,6 @@ metadata:
 data:
    logger_name: " Local Manager  " # Name as per need
    log_level:  "DEBUG"
-   log_path_general: "/logs/lm.log"
-   log_path_timing: "/logs/lmtime.log"
    api_port: "3500" # port for API svc
    msg_broker_user: "fbk_user" # leave empty for amqp without authentication
    msg_broker_password: "@mqpt1m" # leave empty for amqp without authentication
@@ -35,11 +33,6 @@ spec:
           configMapKeyRef:
             name: local-manager-cm
             key: api_port
-      - name: LOG_PATH_GENERAL
-        valueFrom:
-          configMapKeyRef:
-            name: local-manager-cm
-            key: log_path_general
       - name: LOG_LEVEL
         valueFrom:
           configMapKeyRef:
@@ -62,13 +55,6 @@ spec:
             key: msg_broker_password
     resources: {}
     imagePullPolicy: {{ .Values.image.pullPolicy}}
-    volumeMounts:
-      - mountPath: "/logs/"
-        name: mypd
-  volumes:
-    - name: mypd
-      persistentVolumeClaim:
-        claimName: log-pvc
   dnsPolicy: ClusterFirst
   restartPolicy: Always
 status: {}

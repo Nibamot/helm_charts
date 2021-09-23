@@ -6,7 +6,7 @@ replicaCount: 1
 namespace: default
 image:
   repository: utomn0/local_manager
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
@@ -15,6 +15,3 @@ service:
   type: ClusterIP
   port: 3500
   protocol: TCP
-
-volume:
-  mount: "/logs/"

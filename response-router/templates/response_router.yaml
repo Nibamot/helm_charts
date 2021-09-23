@@ -6,8 +6,6 @@ metadata:
 data:
    logger_name: " Response Router " #ResponseRouter1/2/3..
    log_level:  "DEBUG"
-   log_path_general: "/logs/rr.log"
-   log_path_timing: "/logs/rrtime.log"
    api_port: "3000" # port for API svc
    msg_broker_addr: "163.162.42.24:5672" # for IT TIM:163.162.42.24
    msg_broker_user: "fbk_user"
@@ -32,11 +30,6 @@ spec:
           configMapKeyRef:
             name: response-router-cm
             key: api_port
-      - name: LOG_PATH_GENERAL
-        valueFrom:
-          configMapKeyRef:
-            name: response-router-cm
-            key: log_path_general
       - name: LOG_LEVEL
         valueFrom:
           configMapKeyRef:
@@ -69,13 +62,6 @@ spec:
             key: send_topic
     resources: {}
     imagePullPolicy: {{ .Values.image.pullPolicy}}
-    volumeMounts:
-      - mountPath: "/logs/"
-        name: mypd
-  volumes:
-    - name: mypd
-      persistentVolumeClaim:
-        claimName: log-pvc
   dnsPolicy: ClusterFirst
   restartPolicy: Always
 status: {}
