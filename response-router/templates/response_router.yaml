@@ -7,9 +7,9 @@ data:
    logger_name: " Response Router " #ResponseRouter1/2/3..
    log_level:  "DEBUG"
    api_port: "3000" # port for API svc
-   msg_broker_addr: "163.162.42.24:5672" # for IT TIM:163.162.42.24
-   msg_broker_user: "fbk_user"
-   msg_broker_password: "@mqpt1m"
+   msg_broker_addr: "80.159.227.43:31123" # for IT TIM:163.162.42.24
+   msg_broker_user: "" #"fbk_user"
+   msg_broker_password: "" #@mqpt1m"
    send_topic: "TO_CARS" # msg_broker send topic
 
 ---
