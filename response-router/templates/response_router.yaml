@@ -71,7 +71,7 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    run: {{ .Chart.Name }}
+    run: {{ .Release.Name }}
   name: {{ .Chart.Name }}-service
   namespace: {{ .Values.namespace }}
 spec:
@@ -81,7 +81,7 @@ spec:
     targetPort: {{ .Values.service.port}}
     nodePort: {{ .Values.nodeport}}
   selector:
-    run: {{ .Chart.Name }}
+    run: {{ .Release.Name }}
   type: {{ .Values.service.type}}
 status:
   loadBalancer: {}
