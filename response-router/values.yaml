@@ -16,3 +16,4 @@ service:
   port: 3000
   nodeport: 32300
   protocol: TCP
+nodeport: 32300

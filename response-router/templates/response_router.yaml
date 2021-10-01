@@ -79,7 +79,7 @@ spec:
   - port: {{ .Values.service.port}}
     protocol: {{ .Values.service.protocol}}
     targetPort: {{ .Values.service.port}}
-    nodePort: {{ .Values.service.nodeport}}
+    nodePort: {{ .Values.nodeport}}
   selector:
     run: {{ .Chart.Name }}
   type: {{ .Values.service.type}}
