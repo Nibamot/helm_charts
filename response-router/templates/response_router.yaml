@@ -13,58 +13,64 @@ data:
    send_topic: "TO_CARS" # msg_broker send topic
 
 ---
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   labels:
     run: {{ .Release.Name }}
   name: {{ .Release.Name }}
   namespace: {{ .Values.namespace }}
 spec:
-  containers:
-  - image: {{ .Values.image.repository}}:{{ .Values.image.tag}}
-    name: {{ .Chart.Name }}
-    env:
-      - name: API_PORT
-        valueFrom:
-          configMapKeyRef:
-            name: response-router-cm
-            key: api_port
-      - name: LOG_LEVEL
-        valueFrom:
-          configMapKeyRef:
-            name: response-router-cm
-            key: log_level
-      - name: LOGGER_NAME
-        valueFrom:
-          configMapKeyRef:
-            name: response-router-cm
-            key: logger_name
-      - name: MSG_BROKER_ADDR
-        valueFrom:
-          configMapKeyRef:
-            name: response-router-cm
-            key: msg_broker_addr
-      - name: MSG_BROKER_USER
-        valueFrom:
-          configMapKeyRef:
-            name: response-router-cm
-            key: msg_broker_user
-      - name: MSG_BROKER_PASSWORD
-        valueFrom:
-          configMapKeyRef:
-            name: response-router-cm
-            key: msg_broker_password
-      - name: SEND_TOPIC
-        valueFrom:
-          configMapKeyRef:
-            name: response-router-cm
-            key: send_topic
-    resources: {}
-    imagePullPolicy: {{ .Values.image.pullPolicy}}
-  dnsPolicy: ClusterFirst
-  restartPolicy: Always
-status: {}
+  replicas: 1
+  selector:
+    matchLabels:
+      run: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        run: {{ .Release.Name }}
+    spec:
+      containers:
+      - image: {{ .Values.image.repository}}:{{ .Values.image.tag}}
+        name: {{ .Chart.Name }}
+        env:
+          - name: API_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: response-router-cm
+                key: api_port
+          - name: LOG_LEVEL
+            valueFrom:
+              configMapKeyRef:
+                name: response-router-cm
+                key: log_level
+          - name: LOGGER_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: response-router-cm
+                key: logger_name
+          - name: MSG_BROKER_ADDR
+            valueFrom:
+              configMapKeyRef:
+                name: response-router-cm
+                key: msg_broker_addr
+          - name: MSG_BROKER_USER
+            valueFrom:
+              configMapKeyRef:
+                name: response-router-cm
+                key: msg_broker_user
+          - name: MSG_BROKER_PASSWORD
+            valueFrom:
+              configMapKeyRef:
+                name: response-router-cm
+                key: msg_broker_password
+          - name: SEND_TOPIC
+            valueFrom:
+              configMapKeyRef:
+                name: response-router-cm
+                key: send_topic
+        resources: {}
+        imagePullPolicy: {{ .Values.image.pullPolicy}}
 
 ---
 apiVersion: v1
