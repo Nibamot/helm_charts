@@ -3,7 +3,7 @@ entries:
   local-manager:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-10-04T11:55:53.074736757+02:00"
+    created: "2021-10-14T16:20:20.641297084+02:00"
     description: CLM Local Manager helm chart for Kubernetes
     digest: 23b5946f7bc11ce052d662c9a543597f4f2689b813d04e7ac87334f6c18de4bb
     name: local-manager
@@ -14,7 +14,7 @@ entries:
   main-manager:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-10-04T11:55:53.075215066+02:00"
+    created: "2021-10-14T16:20:20.642586955+02:00"
     description: CLM Main Manager helm chart for Kubernetes
     digest: 2fc0f28bf29af60445db6297e5ec724f2d660ce7806c51e9ea17e6effefd28a2
     name: main-manager
@@ -25,9 +25,9 @@ entries:
   response-router:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-10-04T11:55:53.075500456+02:00"
+    created: "2021-10-14T16:20:20.643074302+02:00"
     description: CLM response router helm chart for Kubernetes
-    digest: d51b36dc5c977665135aa1ad6444a7f43fe3c9876692991bec79934ae6851a8c
+    digest: 48a626f88df8eefbdc391d83ed8ca7e703452240c0a32bc7f44f1dbb7513da60
     name: response-router
     type: application
     urls:
@@ -36,7 +36,7 @@ entries:
   spider-lightedge:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-10-04T11:55:53.07624084+02:00"
+    created: "2021-10-14T16:20:20.643776603+02:00"
     description: A Helm chart for Kubernetes
     digest: be9fc46fad92d89e9f6453aa7bc623bf2562972748946a3ebf943d21cffa588a
     name: spider-lightedge
@@ -44,4 +44,4 @@ entries:
     urls:
     - spider-lightedge-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-04T11:55:53.07327391+02:00"
+generated: "2021-10-14T16:20:20.640632705+02:00"
