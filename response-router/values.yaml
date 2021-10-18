@@ -14,6 +14,11 @@ image:
 service:
   type: NodePort
   port: 3000
-  nodeport: 32300
+  #nodeport: 32300
   protocol: TCP
 nodePort: 32300
+
+msgbrokerep: "80.159.227.43:31123"
+msgbrokeruser: ""
+msgbrokerpwd: ""
+sendtopic: "TO_CARS"

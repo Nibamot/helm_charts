@@ -50,25 +50,13 @@ spec:
                 name: {{ .Release.Name }}-www-data
                 key: logger_name
           - name: MSG_BROKER_ADDR
-            valueFrom:
-              configMapKeyRef:
-                name: {{ .Release.Name }}-www-data
-                key: msg_broker_addr
+            value: {{ .Values.msgbrokerep}}
           - name: MSG_BROKER_USER
-            valueFrom:
-              configMapKeyRef:
-                name: {{ .Release.Name }}-www-data
-                key: msg_broker_user
+            value: {{ .Values.msgbrokeruser}}
           - name: MSG_BROKER_PASSWORD
-            valueFrom:
-              configMapKeyRef:
-                name: {{ .Release.Name }}-www-data
-                key: msg_broker_password
+            value: {{ .Values.msgbrokerpwd}}
           - name: SEND_TOPIC
-            valueFrom:
-              configMapKeyRef:
-                name: {{ .Release.Name }}-www-data
-                key: send_topic
+            value: {{ .Values.sendtopic}}
         resources: {}
         imagePullPolicy: {{ .Values.image.pullPolicy}}
 
