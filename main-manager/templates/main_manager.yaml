@@ -6,7 +6,7 @@ metadata:
 data:
    logger_name: " Main Manager " # name as per need
    log_level:  "DEBUG"
-   lm_config_json: "local_manager_config.json"
+   lm_config_json: "support_message_config.json"
    log_path_general: "/logs/mm.log"
    log_path_timing: "/logs/mmtime.log"
    api_port: "4000" # port for API svc
