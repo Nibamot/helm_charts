@@ -9,8 +9,8 @@ data:
    log_path_general: "/logs/lm.log"
    log_path_timing: "/logs/lmtime.log"
    api_port: "3500" # port for API svc
-   msg_broker_user: "fbk_user" # leave empty for amqp without authentication
-   msg_broker_password: "@mqpt1m" # leave empty for amqp without authentication
+   msg_broker_user: "" #"fbk_user" # leave empty for amqp without authentication
+   msg_broker_password: "" #"@mqpt1m" # leave empty for amqp without authentication
    response_router_post_address: "http://response-router-service:3000/api/item/from_local_mgr_api/21"
 ---
 apiVersion: v1

@@ -9,9 +9,10 @@ data:
    log_path_general: "/logs/rr.log"
    log_path_timing: "/logs/rrtime.log"
    api_port: "3000" # port for API svc
-   msg_broker_addr: "163.162.42.24:5672" # for IT TIM:163.162.42.24
-   msg_broker_user: "fbk_user"
-   msg_broker_password: "@mqpt1m"
+   msg_broker_addr_one: "192.168.8.2:30072" # for IT TIM:163.162.42.24
+   msg_broker_addr_two: "192.168.8.2:30172"
+   msg_broker_user: "" #"fbk_user"
+   msg_broker_password: "" #"@mqpt1m"
    send_topic: "TO_CARS" # msg_broker send topic
 
 ---
@@ -47,11 +48,16 @@ spec:
           configMapKeyRef:
             name: response-router-cm
             key: logger_name
-      - name: MSG_BROKER_ADDR
+      - name: MSG_BROKER_ADDR_ONE
         valueFrom:
           configMapKeyRef:
             name: response-router-cm
-            key: msg_broker_addr
+            key: msg_broker_addr_one
+      - name: MSG_BROKER_ADDR_TWO
+        valueFrom:
+          configMapKeyRef:
+            name: response-router-cm
+            key: msg_broker_addr_two
       - name: MSG_BROKER_USER
         valueFrom:
           configMapKeyRef:
