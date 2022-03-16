@@ -8,7 +8,7 @@ image:
   repository: utomn0/local_manager
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "dev"
 
 
 service:

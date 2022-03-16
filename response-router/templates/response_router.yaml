@@ -7,7 +7,8 @@ data:
    logger_name: " Response Router " #ResponseRouter1/2/3..
    log_level:  "DEBUG"
    api_port: "3000" # port for API svc
-   msg_broker_addr: "80.159.227.43:31123" # for IT TIM:163.162.42.24
+   msg_broker_addr_one: "localhost:30072" #"80.159.227.43:31123" # for IT TIM:163.162.42.24
+   msg_broker_addr_two: "localhost:30172"
    msg_broker_user: "" #"fbk_user"
    msg_broker_password: "" #@mqpt1m"
    send_topic: "TO_CARS" # msg_broker send topic
@@ -49,8 +50,10 @@ spec:
               configMapKeyRef:
                 name: {{ .Release.Name }}-www-data
                 key: logger_name
-          - name: MSG_BROKER_ADDR
-            value: {{ .Values.msgbrokerep}}
+          - name: MSG_BROKER_ADDR_ONE
+            value: {{ .Values.msgbrokerep_one}}
+          - name: MSG_BROKER_ADDR_TWO
+            value: {{ .Values.msgbrokerep_two}}
           - name: MSG_BROKER_USER
             value: {{ .Values.msgbrokeruser}}
           - name: MSG_BROKER_PASSWORD

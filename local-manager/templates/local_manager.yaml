@@ -7,9 +7,9 @@ data:
    logger_name: " Local Manager  " # Name as per need
    log_level:  "DEBUG"
    api_port: "3500" # port for API svc
-   msg_broker_user: "fbk_user" # leave empty for amqp without authentication
-   msg_broker_password: "@mqpt1m" # leave empty for amqp without authentication
-   response_router_post_address: "http://response-router-service:3000/api/item/from_local_mgr_api/21"
+   msg_broker_user: "" #"fbk_user" # leave empty for amqp without authentication
+   msg_broker_password: "" #"@mqpt1m" # leave empty for amqp without authentication
+   response_router_post_address: "http://response-router-service:3000/api/item/rr_ms_lm/v1/21"
 ---
 apiVersion: v1
 kind: Pod
