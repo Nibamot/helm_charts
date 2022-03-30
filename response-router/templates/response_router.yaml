@@ -35,20 +35,11 @@ spec:
         name: {{ .Chart.Name }}
         env:
           - name: API_PORT
-            valueFrom:
-              configMapKeyRef:
-                name: {{ .Release.Name }}-www-data
-                key: api_port
+            value: {{ .Values.service.port}}
           - name: LOG_LEVEL
-            valueFrom:
-              configMapKeyRef:
-                name: {{ .Release.Name }}-www-data
-                key: log_level
+            value: {{ .Values.loglevel}}
           - name: LOGGER_NAME
-            valueFrom:
-              configMapKeyRef:
-                name: {{ .Release.Name }}-www-data
-                key: logger_name
+            value: {{ .Values.loggername}}
           - name: MSG_BROKER_ADDR
             value: {{ .Values.msgbrokerep}}
           - name: MSG_BROKER_USER
