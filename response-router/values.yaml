@@ -12,6 +12,7 @@ image:
 
 loglevel: "DEBUG"
 loggername: " Response Router "
+apiport: "3000"
 
 service:
   type: NodePort
