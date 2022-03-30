@@ -35,7 +35,7 @@ spec:
         name: {{ .Chart.Name }}
         env:
           - name: API_PORT
-            value: {{ .Values.apiport}}
+            value: "3000" #{{ .Values.apiport}}
           - name: LOG_LEVEL
             value: {{ .Values.loglevel}}
           - name: LOGGER_NAME
