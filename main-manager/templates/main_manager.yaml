@@ -6,7 +6,7 @@ metadata:
 data:
    logger_name: " Main Manager " # name as per need
    log_level:  "DEBUG"
-   lm_config_json: "local_manager_config.json"
+   lm_config_json: "support_message_config.json"
    api_port: "4000" # port for API svc
    local_manager_post_address_one: "http://local-manager-service.default.svc.cluster.local:3500/api/item/from_main_mgr_config_api/1"
    #local_manager_post_address_two: "http://local-manager-2-service.clm-test.empower:3501/api/item/from_main_mgr_config_api/1"

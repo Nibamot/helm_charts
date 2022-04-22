@@ -8,11 +8,8 @@ image:
   repository: utomn0/response_router
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "dev"
 
-loglevel: "DEBUG"
-loggername: " Response Router "
-apiport: "3000"
 
 service:
   type: NodePort
@@ -21,7 +18,9 @@ service:
   protocol: TCP
 nodePort: 32300
 
-msgbrokerep: "80.159.227.43:31123"
-msgbrokeruser: ""
-msgbrokerpwd: ""
+msgbrokerep_one: "80.159.227.2:5672" #"80.159.227.43:31123"
+msgbrokerep_two: "80.159.227.2:5672"
+msgbrokeruser: "" #"fbk_user"
+msgbrokerpwd: ""  #@mqpt1m"
 sendtopic: "TO_CARS"
+locktimemeasurement: 0

@@ -7,7 +7,8 @@ data:
    logger_name: " Response Router " #ResponseRouter1/2/3..
    log_level:  "DEBUG"
    api_port: "3000" # port for API svc
-   msg_broker_addr: "80.159.227.43:31123" # for IT TIM:163.162.42.24
+   msg_broker_addr_one: {{ .Values.msgbrokerep_one}} #"80.159.227.43:31123" # for IT TIM:163.162.42.24
+   msg_broker_addr_two: {{ .Values.msgbrokerep_two}}
    msg_broker_user: "" #"fbk_user"
    msg_broker_password: "" #@mqpt1m"
    send_topic: "TO_CARS" # msg_broker send topic
@@ -35,19 +36,32 @@ spec:
         name: {{ .Chart.Name }}
         env:
           - name: API_PORT
-            value: "3000" #{{ .Values.apiport}}
+            valueFrom:
+              configMapKeyRef:
+                name: {{ .Release.Name }}-www-data
+                key: api_port
           - name: LOG_LEVEL
-            value: {{ .Values.loglevel}}
+            valueFrom:
+              configMapKeyRef:
+                name: {{ .Release.Name }}-www-data
+                key: log_level
           - name: LOGGER_NAME
-            value: {{ .Values.loggername}}
-          - name: MSG_BROKER_ADDR
-            value: {{ .Values.msgbrokerep}}
+            valueFrom:
+              configMapKeyRef:
+                name: {{ .Release.Name }}-www-data
+                key: logger_name
+          - name: MSG_BROKER_ADDR_ONE
+            value: {{ .Values.msgbrokerep_one}}
+          - name: MSG_BROKER_ADDR_TWO
+            value: {{ .Values.msgbrokerep_two}}
           - name: MSG_BROKER_USER
             value: {{ .Values.msgbrokeruser}}
           - name: MSG_BROKER_PASSWORD
             value: {{ .Values.msgbrokerpwd}}
           - name: SEND_TOPIC
             value: {{ .Values.sendtopic}}
+          - name: LOCK_TIME_MEASUREMENT
+            value: {{ .Values.locktimemeasurement}}
         resources: {}
         imagePullPolicy: {{ .Values.image.pullPolicy}}
 
