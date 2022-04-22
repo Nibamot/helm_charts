@@ -43,16 +43,12 @@ spec:
           configMapKeyRef:
             name: local-manager-cm
             key: logger_name
+      - name: RECEIVE_TOPIC
+        value: {{.Values.receivetopic}}
       - name: MSG_BROKER_USER
-        valueFrom:
-          configMapKeyRef:
-            name: local-manager-cm
-            key: msg_broker_user
+        value: {{ .Values.msgbrokeruser}}
       - name: MSG_BROKER_PASSWORD
-        valueFrom:
-          configMapKeyRef:
-            name: local-manager-cm
-            key: msg_broker_password
+        value: {{ .Values.msgbrokerpwd}}
     resources: {}
     imagePullPolicy: {{ .Values.image.pullPolicy}}
   dnsPolicy: ClusterFirst
@@ -71,6 +67,7 @@ spec:
   - port: {{ .Values.service.port}}
     protocol: {{ .Values.service.protocol}}
     targetPort: {{ .Values.service.port}}
+    nodePort: {{ .Values.nodePort}}
   selector:
     run: {{ .Chart.Name }}
   type: {{ .Values.service.type}}

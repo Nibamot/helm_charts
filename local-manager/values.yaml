@@ -12,6 +12,13 @@ image:
 
 
 service:
-  type: ClusterIP
+  type: NodePort
   port: 3500
+  #nodePort: 32301
   protocol: TCP
+
+nodePort: 32301
+
+msgbrokeruser: "" #"fbk_user"
+msgbrokerpwd: ""  #@mqpt1m"
+receivetopic: "FROM_CARS"
