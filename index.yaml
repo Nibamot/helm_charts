@@ -3,9 +3,9 @@ entries:
   local-manager:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-04-22T16:31:08.829958841+02:00"
+    created: "2022-04-22T16:39:32.729834373+02:00"
     description: CLM Local Manager helm chart for Kubernetes
-    digest: 83778e989eff40bdd02003746dc9ecde3b1dbcd918811e3a43e585839bbe2b3c
+    digest: f6a11d1a0cfee6bf489cead816ac04d531a02aa7ac59f2c5ffca2f809858a22a
     name: local-manager
     type: application
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-04-22T16:31:08.829702936+02:00"
+    created: "2022-04-22T16:39:32.729604856+02:00"
     description: CLM Local Manager helm chart for Kubernetes
     digest: 518357bcd73d4b68aa42ac74d25cdcea05b9102ccd8d39c3706d6795b50a1858
     name: local-manager
@@ -23,7 +23,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-04-22T16:31:08.829439706+02:00"
+    created: "2022-04-22T16:39:32.729388119+02:00"
     description: CLM Local Manager helm chart for Kubernetes
     digest: d3c0e425b7b74abc62cf07bddf246249c9ed254890fd05ba04388be65a83d151
     name: local-manager
@@ -34,7 +34,7 @@ entries:
   main-manager:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-04-22T16:31:08.830416712+02:00"
+    created: "2022-04-22T16:39:32.730259678+02:00"
     description: CLM Main Manager helm chart for Kubernetes
     digest: b03fa716531b4b647e0d866c5ef5ac7080269dc0d9eae3ea968402edac1588f6
     name: main-manager
@@ -44,7 +44,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-04-22T16:31:08.830186603+02:00"
+    created: "2022-04-22T16:39:32.730039988+02:00"
     description: CLM Main Manager helm chart for Kubernetes
     digest: b76594acddf653d10bbf7bd8991fe1f2f09aacdffa93f0e9e1e77b8fec0ee4d6
     name: main-manager
@@ -55,7 +55,7 @@ entries:
   nuclio:
   - apiVersion: v1
     appVersion: 1.7.1
-    created: "2022-04-22T16:31:08.831803628+02:00"
+    created: "2022-04-22T16:39:32.732085299+02:00"
     description: Serverless for Real-Time and Data-Driven Applications
     digest: 0e2a6d1d70c16e796fd0759d7020134651641c3422ff1f4f482cda86a54981a7
     home: https://nuclio.io
@@ -78,7 +78,7 @@ entries:
   response-router:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-04-22T16:31:08.832333417+02:00"
+    created: "2022-04-22T16:39:32.73252626+02:00"
     description: CLM response router helm chart for Kubernetes
     digest: ff27b1e37a8e38ad37aa8c23dc51033884f21c3edab2ffcdc551b40fac7523d2
     name: response-router
@@ -88,7 +88,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-04-22T16:31:08.832069125+02:00"
+    created: "2022-04-22T16:39:32.732312023+02:00"
     description: CLM response router helm chart for Kubernetes
     digest: 630a5183b3fa1f06d62eef9304bdc31c4f2ac3dd4217e65aa9639ba38ac2a92f
     name: response-router
@@ -99,7 +99,7 @@ entries:
   spider-lightedge:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-04-22T16:31:08.832761731+02:00"
+    created: "2022-04-22T16:39:32.732937784+02:00"
     description: A Helm chart for Kubernetes
     digest: be9fc46fad92d89e9f6453aa7bc623bf2562972748946a3ebf943d21cffa588a
     name: spider-lightedge
@@ -107,4 +107,4 @@ entries:
     urls:
     - spider-lightedge-0.1.0.tgz
     version: 0.1.0
-generated: "2022-04-22T16:31:08.829059048+02:00"
+generated: "2022-04-22T16:39:32.729036398+02:00"
