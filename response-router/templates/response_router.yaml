@@ -61,7 +61,7 @@ spec:
           - name: SEND_TOPIC
             value: {{ .Values.sendtopic}}
           - name: LOCK_TIME_MEASUREMENT
-            value: 0 #{{ .Values.locktimemeasurement}}
+            value: "0" #{{ .Values.locktimemeasurement}}
         resources: {}
         imagePullPolicy: {{ .Values.image.pullPolicy}}
 
