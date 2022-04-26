@@ -24,4 +24,4 @@ msgbrokerep_two: "80.159.227.2:5672"
 msgbrokeruser: "" #"fbk_user"
 msgbrokerpwd: ""  #@mqpt1m"
 sendtopic: "TO_CARS"
-locktimemeasurement: false
+#locktimemeasurement: false
