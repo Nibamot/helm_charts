@@ -3,7 +3,7 @@ entries:
   local-manager:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-04-26T10:03:12.059935155+02:00"
+    created: "2022-04-26T10:07:50.266129885+02:00"
     description: CLM Local Manager helm chart for Kubernetes
     digest: f6a11d1a0cfee6bf489cead816ac04d531a02aa7ac59f2c5ffca2f809858a22a
     name: local-manager
@@ -14,7 +14,7 @@ entries:
   main-manager:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-04-26T10:03:12.060253299+02:00"
+    created: "2022-04-26T10:07:50.266377803+02:00"
     description: CLM Main Manager helm chart for Kubernetes
     digest: add7fd0c66b8b5f6d592a9397dabcca7075c600a922a4cd07ee0c2e99238bd0f
     name: main-manager
@@ -25,7 +25,7 @@ entries:
   nuclio:
   - apiVersion: v1
     appVersion: 1.7.1
-    created: "2022-04-26T10:03:12.061419545+02:00"
+    created: "2022-04-26T10:07:50.267741956+02:00"
     description: Serverless for Real-Time and Data-Driven Applications
     digest: 0e2a6d1d70c16e796fd0759d7020134651641c3422ff1f4f482cda86a54981a7
     home: https://nuclio.io
@@ -48,9 +48,9 @@ entries:
   response-router:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-04-26T10:03:12.06165793+02:00"
+    created: "2022-04-26T10:07:50.268044376+02:00"
     description: CLM response router helm chart for Kubernetes
-    digest: 1b9182c85a254632f13fb52295c667c7f138cbf8ffa2219bd380ca0e48887dcf
+    digest: 2f2b4bca3da24a10f319f114d580e19e75b54ed15de8a00d1713b9ef2790514d
     name: response-router
     type: application
     urls:
@@ -59,7 +59,7 @@ entries:
   spider-lightedge:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-04-26T10:03:12.062044767+02:00"
+    created: "2022-04-26T10:07:50.268492659+02:00"
     description: A Helm chart for Kubernetes
     digest: be9fc46fad92d89e9f6453aa7bc623bf2562972748946a3ebf943d21cffa588a
     name: spider-lightedge
@@ -67,4 +67,4 @@ entries:
     urls:
     - spider-lightedge-0.1.0.tgz
     version: 0.1.0
-generated: "2022-04-26T10:03:12.059486729+02:00"
+generated: "2022-04-26T10:07:50.265692527+02:00"
