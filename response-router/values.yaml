@@ -8,8 +8,9 @@ image:
   repository: utomn0/response_router
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "dev"
-
+  tag: "latest"
+  
+versiontag: "latest"
 
 service:
   type: NodePort
